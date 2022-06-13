@@ -61,3 +61,9 @@ $route['checklogin'] = "Auth/checkLogin";
 $route['verify_email/(:any)'] = "Auth/verifyEmail/$1";
 
 $route['admin/dashboard'] = "Admin/DashboardController/dashboardView";
+$route['admin/product/index'] = "Admin/ProductController/index";
+$route['admin/product/create'] = "Admin/ProductController/create";
+$route['admin/product/store'] = "Admin/ProductController/store";
+$route['admin/product/edit/(:any)'] = "Admin/ProductController/edit/$1";
+$route['admin/product/update/(:any)'] = "Admin/ProductController/update/$1";
+$route['admin/product/delete/(:any)'] = "Admin/ProductController/delete/$1";
