@@ -31,7 +31,7 @@ class Auth extends CI_Controller {
             $data = array('id' => $is_login->id);
             $this->session->set_userdata($data);
             if($is_login->role == "admin"){
-                echo "admin";
+                redirect(base_url('index.php/admin/dashboard'));
             }else{
                 echo "user";
             }
