@@ -71,7 +71,9 @@
     <thead>
       <tr>
         <th>User Name</th>
-        <th>Total Price</th>
+        <th>Total Price (USD)</th>
+        <th>Total Price (EUR)</th>
+        <th>Total Price (RON)</th>
       </tr>
     </thead>
     <tbody>
@@ -79,6 +81,8 @@
       <tr>
         <td><?php echo $product['name'] ?></td>
         <td><?php echo $product['total_price'] ?></td>
+        <td><?php echo convertCurrency("EUR",$product['total_price']) ?></td>
+        <td><?php echo convertCurrency("RON",$product['total_price']) ?></td>
       </tr>
       <?php } ?>
     </tbody>
