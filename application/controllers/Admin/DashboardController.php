@@ -12,15 +12,13 @@ class DashboardController extends CI_Controller {
         $this->load->model('UserModel');
         $this->load->model('ProductModel');
         $this->load->model('OrderModel');
-    
+        $this->load->helper('currencyconverter');
     }
 
 	public function dashboardView()
 	{
         $user  = new UserModel();
         $products = new ProductModel();
-
-    
         $data["active_count"] = $user->getActiveUserCount();
         $data['attached_product_user_count'] = $user->getAttachProductUserCount();
         $data['active_products'] = count($products->getActiveProducts());
