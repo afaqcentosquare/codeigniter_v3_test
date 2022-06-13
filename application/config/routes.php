@@ -67,3 +67,9 @@ $route['admin/product/store'] = "Admin/ProductController/store";
 $route['admin/product/edit/(:any)'] = "Admin/ProductController/edit/$1";
 $route['admin/product/update/(:any)'] = "Admin/ProductController/update/$1";
 $route['admin/product/delete/(:any)'] = "Admin/ProductController/delete/$1";
+
+
+$route['user/products'] = "User/ProductController/index";
+
+$route['user/order/(:any)'] = "User/OrderController/index/$1";
+$route['user/order/data/store'] = "User/OrderController/store";
