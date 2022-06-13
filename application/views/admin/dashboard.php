@@ -46,6 +46,7 @@
                 </div>
             </div>
         </div>
+        <a href="<?php echo site_url('index.php/admin/product/create');?>" class="btn btn-primary">Add Product</a>
     </div>
     
     <!-- Bootstrap JS -->
