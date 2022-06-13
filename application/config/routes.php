@@ -59,3 +59,5 @@ $route['signup'] = "Auth/signup";
 $route['register'] = "Auth/register";
 $route['checklogin'] = "Auth/checkLogin";
 $route['verify_email/(:any)'] = "Auth/verifyEmail/$1";
+
+$route['admin/dashboard'] = "Admin/DashboardController/dashboardView";
