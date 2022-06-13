@@ -26,7 +26,24 @@ class UserModel extends CI_Model {
     {
         $this->db->where('id', $id);
         return $this->db->update('users', array('email_verified' => 1));
-        
+    }
+
+    public function getActiveUserCount()
+    {
+        $this->db->where('email_verified', 1);
+        $this->db->where('role', 'user');
+        return $this->db->count_all_results('users');        
+    }
+
+    public function getAttachProductUserCount()
+    {
+        $this->db->select('*')
+            ->from('orders')
+            ->group_by('user_id')
+            ->get();
+
+        return $this->db->count_all_results('products');
+
     }
 }
 
