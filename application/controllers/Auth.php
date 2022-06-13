@@ -33,7 +33,7 @@ class Auth extends CI_Controller {
             if($is_login->role == "admin"){
                 redirect(base_url('index.php/admin/dashboard'));
             }else{
-                echo "user";
+                redirect(base_url('index.php/user/products'));
             }
         }else{
             $this->session->set_flashdata("is_login","Login Failed");

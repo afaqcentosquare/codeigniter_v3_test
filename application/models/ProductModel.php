@@ -45,6 +45,12 @@ class ProductModel extends CI_Model {
         return $this->db->delete('products');
     }
 
+    public function getActiveProducts()
+    {
+        $query = $this->db->get_where('products', array('status' => 'active'));
+        return $query->result();
+    }
+
 }
 
 ?>
